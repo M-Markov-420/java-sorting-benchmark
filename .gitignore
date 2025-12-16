@@ -1,0 +1,14 @@
+# Ignore the compiled output directory
+out/
+
+# Ignore compiled java class files (just in case)
+*.class
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings (optional, but recommended)
+.idea/
+.vscode/
+*.iml
