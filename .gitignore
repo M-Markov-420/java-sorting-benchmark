@@ -1,5 +1,6 @@
 # Ignore the compiled output directory
 out/
+target/
 
 # Ignore compiled java class files (just in case)
 *.class

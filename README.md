@@ -6,18 +6,20 @@ A command-line Java application designed to benchmark and compare the performanc
 
 ```text
 src/
-└── app/
-    ├── Main.java
-    ├── sorts/
-    │   ├── Sorter.java
-    │   ├── BubbleSort.java
-    │   ├── SelectionSort.java
-    │   ├── MergeSort.java
-    │   └── QuickSort.java
-    └── util/
-        ├── ArrayUtils.java
-        ├── InputUtils.java
-        └── Bench.java
+└── main/
+    └── java/
+        └── app/
+            ├── Main.java
+            ├── sorts/
+            │   ├── Sorter.java
+            │   ├── BubbleSort.java
+            │   ├── SelectionSort.java
+            │   ├── MergeSort.java
+            │   └── QuickSort.java
+            └── util/
+                ├── ArrayUtils.java
+                ├── InputUtils.java
+                └── Bench.java
 ```
 
 ## 🚀 Features
@@ -35,18 +37,19 @@ src/
 
 ## 🛠️ Build & Run
 
-### 1. Compilation
-Navigate to the root of your source directory (above `app`) or the `src` folder if you created one. Run the following command to compile all files and place them in an `out` directory:
+### 1. Compile
+From the project root, run:
 ```bash
-javac -d out src/app/*.java src/app/sorts/*.java src/app/util/*.java
+mvn compile
 ```
-*Note: Ensure your file paths match where you saved the `.java` files.*
 
-### 2. Execution
-Run the compiled application using the classpath pointing to the `out` directory:
+### 2. Run
+Start the interactive benchmark with:
 ```bash
-java -cp out app.Main
+mvn exec:java
 ```
+
+To create a packaged JAR, run `mvn package`. Maven writes compiled files and build output to `target/`.
 ## 💻 Usage
 
 When you run the application, it will interactively ask for the following configuration:
